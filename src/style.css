@@ -1,14 +1,14 @@
 
-  body{ 
+body{ 
     height: 40rem;
-    color: blueviolet; 
-    background-image: url('./image/happy-people1.png');
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
+    color: rgba(0, 0, 255, 0.804); 
 }
 
 .align-items-center{
     position: relative;
-    top: 17rem;
+    top: 1rem;
 }
-  
+
+button:hover {
+  cursor: pointer;
+}

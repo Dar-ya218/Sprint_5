@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-    <>
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,28 +8,32 @@
         <link rel="stylesheet" href="style.css" />
     </head>
     <body>
-        <main>
-            <div class="container primary my-5 p-5" id="hero_ilustration">
-                <div class="row justify-content-center align-items-center ">
-                    <div class="col-md-8">
+        <nav>
+            <div class="weather my-3" >
+                <a href="https://www.accuweather.com/" target="_blank">
+                    <p id="weatherParagraph"></p>
+                </a>
+            </div>
+        </nav>
+            <div class="container align-items-center" id="hero_ilustration">
+                        <div class="col-md-8">
+                            <img class="img-fluid" src="image/happy-people2.png">
                         <h2 class="text-start fw-semibold">
                             Are you ready to laugh? 😂
                         </h2>
+                        <br>
                         <p id="result" class="text-muted text-start fw-semibold">
-                            Dale al boton
+                            Pres the button 👇
                         </p>
                         <div id="btn" style="display: none;">
                             <button class="btn" id="uno"> 😥</button>
                             <button class="btn" id="dos"> 😐</button>
                             <button class="btn" id="tres"> 🤣</button>
-
                         </div>
-                        <button id="siguiente_joke" class="btn btn-light fw-semibold">Next joke</button>
-                        
-                    </div>
-                </div>
+                        <button id="siguiente_joke" class="btn btn-primary fw-semibold">Next joke</button>
+                        </div>
             </div>
-        </main>
+            
         <script src="../build/index.js"></script>
         
     </body>

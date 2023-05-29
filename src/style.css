@@ -1,5 +1,7 @@
 
 body{ 
+  max-width: 1200px;
+  justify-content: center;
     height: 40rem;
     color: rgba(0, 0, 255, 0.804); 
 }

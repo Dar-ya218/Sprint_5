@@ -55,7 +55,7 @@ window.addEventListener('load', () => __awaiter(void 0, void 0, void 0, function
         weatherIcon = '⚠️';
     }
     ;
-    console.log(`Temperature: ${currentWeather.temperature}°C`);
+    console.log(`Temperature: ${currentWeather.temperature}ºC`);
     console.log(`Icon: ${weatherIcon}`);
     const weatherParagraph = document.getElementById('weatherParagraph');
     if (weatherParagraph) {
@@ -63,9 +63,11 @@ window.addEventListener('load', () => __awaiter(void 0, void 0, void 0, function
     }
     weatherParagraph === null || weatherParagraph === void 0 ? void 0 : weatherParagraph.append(`${weatherIcon}  ${currentWeather.temperature}ºC`);
 }));
+//**** */
+//Ejercicio 1
 const jokeValor = [];
 let jokeObject = {
-    score: 0,
+    score: null,
 };
 function fetchJoke() {
     return __awaiter(this, void 0, void 0, function* () {
@@ -77,17 +79,38 @@ function fetchJoke() {
     });
 }
 ;
+// Ejercicio 5
+function fetchChuckNorrisJokle() {
+    return __awaiter(this, void 0, void 0, function* () {
+        const response = yield fetch('https://api.chucknorris.io/jokes/random');
+        const data = yield response.json();
+        return data.value;
+    });
+}
+;
 const siguienteJoke = document.getElementById("siguiente_joke");
 siguienteJoke === null || siguienteJoke === void 0 ? void 0 : siguienteJoke.addEventListener("click", () => __awaiter(void 0, void 0, void 0, function* () {
-    if (jokeObject.score !== 0) {
+    if (jokeObject.score !== null) {
         jokeValor.push(jokeObject);
         console.log('jokeValor', jokeValor);
     }
-    const joke = yield fetchJoke();
-    console.log(joke);
-    const jokeElement = document.getElementById("result");
-    if (jokeElement instanceof HTMLElement) {
-        jokeElement.innerHTML = joke; // Asignar el chiste al elemento con id "jokeElement"
+    const randomJoke = Math.ceil(Math.random() * 2);
+    let joke;
+    if (randomJoke === 1) {
+        joke = yield fetchJoke();
+        console.log(joke);
+        const jokeElement = document.getElementById("result");
+        if (jokeElement instanceof HTMLElement) {
+            jokeElement.innerHTML = joke; // Asignar el chiste al elemento con id "jokeElement"
+        }
+    }
+    if (randomJoke === 2) {
+        joke = yield fetchChuckNorrisJokle();
+        console.log(joke);
+        const jokeElement = document.getElementById("result");
+        if (jokeElement instanceof HTMLElement) {
+            jokeElement.innerHTML = joke; // Asignar el chiste al elemento con id "jokeElement"
+        }
     }
     const btnValor = document.getElementById("btn");
     btnValor.style.display = "block";

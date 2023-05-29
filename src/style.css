@@ -1,0 +1,23 @@
+
+body{ 
+  max-width: 1200px;
+  justify-content: center;
+    height: 40rem;
+    color: rgba(0, 0, 255, 0.804); 
+}
+
+.align-items-center{
+    position: relative;
+    top: 1rem;
+}
+
+button:hover {
+  cursor: pointer;
+}
+.container{
+  background-image: url("./image/blob.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+}

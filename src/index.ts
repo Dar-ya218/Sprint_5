@@ -101,7 +101,7 @@ siguienteJoke?.addEventListener("click", async()=>{
 
 
   const btnValor = document.getElementById("btn") as HTMLDivElement;
-  btnValor.style.display = "block";
+  btnValor.style.display = "flex";
 
    jokeObject = {
     joke: joke,

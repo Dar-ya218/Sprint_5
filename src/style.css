@@ -14,3 +14,10 @@ body{
 button:hover {
   cursor: pointer;
 }
+.container{
+  background-image: url("./image/blob.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+}

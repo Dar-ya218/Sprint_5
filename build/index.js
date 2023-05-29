@@ -113,7 +113,7 @@ siguienteJoke === null || siguienteJoke === void 0 ? void 0 : siguienteJoke.addE
         }
     }
     const btnValor = document.getElementById("btn");
-    btnValor.style.display = "block";
+    btnValor.style.display = "flex";
     jokeObject = {
         joke: joke,
         score: 0,
